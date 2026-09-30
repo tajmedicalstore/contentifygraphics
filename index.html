@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contentify Graphics</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta name="description" content="Contentify Graphics — a design team for every kind of business. Logos, posters, videos, cards, websites, QR menus and social posts." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#0b132b; --navy2:#1c2541; --orange:#e85d04; --orange2:#f48c06;
+  --cream:#fff7ef; --ink:#141414; --muted:#5d5a56; --line:#ead9c8; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Sora,Segoe UI,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+.wrap{width:min(1120px,calc(100% - 36px));margin:0 auto}
+.nav{position:sticky;top:0;z-index:40;background:rgba(255,247,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.brand img{height:44px;width:auto}
+.links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:600}
+.links a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;font-weight:700;padding:12px 18px;border:0;border-radius:999px;cursor:pointer}
+.btn:hover{background:var(--orange2)}
+.btn-navy{background:var(--navy)}
+.btn-navy:hover{background:var(--navy2)}
+.btn-line{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.menu{display:none;background:none;border:0;font-size:26px}
+.hero{padding:70px 0 28px;background:radial-gradient(800px 280px at 85% -20%,#ffd8a8 0%,transparent 55%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--orange);margin-bottom:12px}
+h1{font-size:clamp(34px,5.2vw,60px);line-height:1.04;letter-spacing:-1.6px}
+h1 em{font-style:normal;color:var(--orange)}
+.lead{margin:18px 0 28px;color:var(--muted);font-size:18px;max-width:540px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:28px;margin-top:34px}
+.stats b{display:block;font-size:26px}
+.stats span{font-size:13px;color:var(--muted)}
+.panel{background:var(--navy);color:#fff;border-radius:28px;padding:26px;box-shadow:14px 18px 0 var(--orange)}
+.panel h3{font-size:22px;margin:0 0 14px}
+.panel li{list-style:none;padding:10px 0;border-top:1px dashed #3a4668;font-size:15px}
+section{padding:76px 0}
+h2{font-size:clamp(28px,3.8vw,42px);letter-spacing:-1px;margin-bottom:8px}
+.sub{color:var(--muted);max-width:580px;margin-bottom:30px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.card .tag{width:44px;height:44px;border-radius:12px;background:#ffe4cc;display:grid;place-items:center;font-weight:800;color:var(--orange);margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:6px}
+.dark{background:var(--navy);color:#fff}
+.dark .sub{color:#c9c3bb}
+.step{background:var(--navy2);border-radius:18px;padding:20px}
+.step b{color:var(--orange);display:block;margin-bottom:6px}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.shot-art{height:180px;display:grid;place-items:center;padding:16px;color:#fff;font-weight:800}
+.s1{background:linear-gradient(135deg,#e85d04,#f48c06)}
+.s2{background:linear-gradient(135deg,#0b132b,#3a506b)}
+.s3{background:linear-gradient(135deg,#148c48,#0d7377)}
+.s4{background:linear-gradient(135deg,#9b2226,#e09f3e)}
+.s5{background:linear-gradient(135deg,#1c2541,#e85d04)}
+.s6{background:linear-gradient(135deg,#3d348b,#7678ed)}
+.shot-body{padding:16px}
+.shot-body small{color:var(--muted)}
+form{display:grid;gap:12px;max-width:560px}
+input,textarea,select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.ok{color:#148c48;font-weight:600}
+footer{border-top:1px solid var(--line);padding:24px 0 80px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.wa{position:fixed;right:16px;bottom:16px;background:#25d366;color:#fff;padding:13px 16px;border-radius:999px;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.18);z-index:50}
+.modal{position:fixed;inset:0;background:rgba(11,19,43,.55);display:none;place-items:center;z-index:60;padding:20px}
+.modal.open{display:grid}
+.modal-box{background:#fff;border-radius:20px;padding:22px;width:min(420px,100%);text-align:center}
+.modal-box img{height:48px;margin:0 auto 12px}
+@media(max-width:860px){
+  .menu{display:block}
+  .links{display:none}
+  .links.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;left:0;right:0;top:74px;background:#fff;padding:16px 20px 22px;border-bottom:1px solid var(--line)}
+  .hero-grid,.grid3,.grid4,.work{grid-template-columns:1fr}
+  .panel{box-shadow:8px 10px 0 var(--orange)}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><img src="logo.png" alt="Contentify" /></a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="links" id="links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="btn">Get samples</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Contentify Graphics</p>
+        <h1>Helping every business look as good as it <em>works</em>.</h1>
+        <p class="lead">We are a design team for shops, offices, brands and startups — any kind of business. Logos, posters, videos, cards, websites, QR menus and social posts, made to look sharp and ready to use.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">See some of our work</a>
+          <a class="btn btn-line" href="#services">What we create</a>
+        </div>
+        <div class="stats">
+          <div><b>7+</b><span>design services</span></div>
+          <div><b>2</b><span>free samples first</span></div>
+          <div><b>Fast</b><span>replies on WhatsApp</span></div>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3>Hi there</h3>
+        <ul>
+          <li>Logos & branding</li>
+          <li>Posters & ads</li>
+          <li>Animations & promo videos</li>
+          <li>Business cards, including luxury finishes</li>
+          <li>Websites</li>
+          <li>QR code menus</li>
+          <li>Instagram & Facebook posts</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="kicker">Services</p>
+      <h2>What we can create for you</h2>
+      <p class="sub">A full graphics studio for every kind of business — shops, clinics, gyms, schools, offices and online brands.</p>
+      <div class="grid3">
+        <article class="card"><div class="tag">01</div><h3>Logos & branding</h3><p>A mark and colour system your business can use on signs, packing, cards and socials.</p></article>
+        <article class="card"><div class="tag">02</div><h3>Posters & ads</h3><p>Offers, events, launches and wall posters that read from across the street.</p></article>
+        <article class="card"><div class="tag">03</div><h3>Animations & promo videos</h3><p>Short motion clips for Instagram, Facebook and WhatsApp status.</p></article>
+        <article class="card"><div class="tag">04</div><h3>Business cards</h3><p>Everyday cards and luxury finishes for owners who hand out a lot of contacts.</p></article>
+        <article class="card"><div class="tag">05</div><h3>Websites</h3><p>A clean site with services, photos and a WhatsApp button. Built to load fast on phones.</p></article>
+        <article class="card"><div class="tag">06</div><h3>QR code menus</h3><p>Scan, read, order. No app install. Easy to update when prices change.</p></article>
+        <article class="card"><div class="tag">07</div><h3>Instagram & Facebook posts</h3><p>Weekly post packs so the page does not go quiet after one good week.</p></article>
+        <article class="card"><div class="tag">+</div><h3>And much more</h3><p>Catalogs, packaging labels, staff cards, story templates — tell us what you need.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="process">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2>Simple from first message</h2>
+      <p class="sub">Message us once. We send samples. You pick a direction. We finish the files.</p>
+      <div class="grid4">
+        <div class="step"><b>01</b><p>You tell us the business name and what you need.</p></div>
+        <div class="step"><b>02</b><p>We send a few samples so you can see the style.</p></div>
+        <div class="step"><b>03</b><p>You choose. We design the real files.</p></div>
+        <div class="step"><b>04</b><p>You get print + phone ready files.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="kicker">Samples</p>
+      <h2>Would you like to see some of our work?</h2>
+      <p class="sub">These are studio samples of the formats we deliver. Reply and we will send real pieces for your business.</p>
+      <div class="work">
+        <article class="shot"><div class="shot-art s1">LOGO</div><div class="shot-body"><h3>Brand mark</h3><small>Logo + colour + type</small></div></article>
+        <article class="shot"><div class="shot-art s2">QR MENU</div><div class="shot-body"><h3>QR menu</h3><small>Phone page + table tent</small></div></article>
+        <article class="shot"><div class="shot-art s3">POST</div><div class="shot-body"><h3>Social post</h3><small>Instagram + Facebook size</small></div></article>
+        <article class="shot"><div class="shot-art s4">POSTER</div><div class="shot-body"><h3>Deal poster</h3><small>Print A3 + story crop</small></div></article>
+        <article class="shot"><div class="shot-art s5">CARD</div><div class="shot-body"><h3>Business card</h3><small>Standard + luxury finish</small></div></article>
+        <article class="shot"><div class="shot-art s6">SITE</div><div class="shot-body"><h3>One-page website</h3><small>Menu, map, WhatsApp</small></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <p class="kicker">Start</p>
+      <h2>Just reply and we will send a few samples.</h2>
+      <p class="sub">Fill this in. It opens WhatsApp with your note ready to send.</p>
+      <form id="form">
+        <input name="name" placeholder="Your name" required />
+        <input name="business" placeholder="Business name" required />
+        <input name="phone" placeholder="WhatsApp number" required />
+        <select name="need">
+          <option>Logos & branding</option>
+          <option>Posters & ads</option>
+          <option>Animations & promo videos</option>
+          <option>Business cards</option>
+          <option>Website</option>
+          <option>QR code menu</option>
+          <option>Instagram & Facebook posts</option>
+          <option>I want to see samples first</option>
+        </select>
+        <textarea name="note" rows="4" placeholder="Anything we should know?"></textarea>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+        <p class="ok" id="formOk"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Contentify Graphics</span>
+  <span>Logos · posters · videos · cards · websites · QR menus · social posts</span>
+</footer>
+
+<a class="wa" id="waFab" href="https://wa.me/923057473924?text=Hi%20Contentify%20Graphics%20%F0%9F%91%8B%0A%0AI%20want%20to%20see%20a%20few%20samples%20of%20your%20work.%0A%0A%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%0APlease%20share%3A%0A%E2%80%A2%20Logo%20%26%20branding%0A%E2%80%A2%20Posters%20%26%20ads%0A%E2%80%A2%20Promo%20videos%0A%E2%80%A2%20Business%20cards%0A%E2%80%A2%20Website%0A%E2%80%A2%20QR%20menu%0A%E2%80%A2%20Instagram%20%26%20Facebook%20posts%0A%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%0A%0AThank%20you.">WhatsApp us</a>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <img src="logo.png" alt="" />
+    <h3>Samples are one message away</h3>
+    <p style="color:#5d5a56;margin:10px 0 18px">Tell us your business name. We will send a few pieces.</p>
+    <button class="btn" id="closeModal">Okay</button>
+  </div>
+</div>
+
+<script>
+const links = document.getElementById('links');
+document.getElementById('menuBtn').onclick = () => links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a => a.onclick = () => links.classList.remove('open'));
+
+const modal = document.getElementById('modal');
+document.getElementById('closeModal').onclick = () => modal.classList.remove('open');
+if (!sessionStorage.getItem('cf_hello')) {
+  setTimeout(() => modal.classList.add('open'), 900);
+  sessionStorage.setItem('cf_hello','1');
+}
+
+document.getElementById('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(e.target).entries());
+  const line = '━━━━━━━━━━━━';
+  const text = [
+    'Hi Contentify Graphics 👋',
+    '',
+    'I want design help for my business.',
+    '',
+    line,
+    '👤 Name: ' + d.name,
+    '🏢 Business: ' + d.business,
+    '📱 My WhatsApp: ' + d.phone,
+    '🎯 Service: ' + d.need,
+    d.note ? '📝 Details: ' + d.note : '',
+    line,
+    '',
+    'Please send a few samples first.',
+    'Thank you.'
+  ].filter(v => v !== '').join('\n');
+  document.getElementById('formOk').textContent = 'Opening WhatsApp…';
+  window.open('https://wa.me/923057473924?text=' + encodeURIComponent(text), '_blank');
+});
+</script>
+</body>
+</html>
